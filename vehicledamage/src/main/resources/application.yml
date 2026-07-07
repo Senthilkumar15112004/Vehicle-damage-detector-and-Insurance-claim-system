@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  forward-headers-strategy: framework 
+
+spring:
+  datasource:
+    url: jdbc:mysql://mysql-db:3306/claim_db
+    username: root
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_ID}
+            client-secret: ${GOOGLE_SECRET}
+            scope: email, profile
+            # This template automatically builds: https://my-vehicle-app.../api/login/oauth2/code/google
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+
+# Custom Config
+app:
+  # IMPORTANT: This must match your Azure DNS exactly
+  frontend-url: "https://my-vehicle-app.eastus.cloudapp.azure.com"
+  jwt-secret: ${JWT_SECRET}
