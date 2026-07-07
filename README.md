@@ -200,6 +200,6 @@ Runs:
 
 ---
 
-## 👨‍💻 Made with ❤️ by **Kishore Kumar R**  
-> Passionate Full Stack & AI Developer • Building intelligent automated systems 🚀
+## 👨‍💻 Made with ❤️ by **Senthilkumar S**  
+
 
